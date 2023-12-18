@@ -45,7 +45,14 @@
 <h4>7.Consul and Vault Configurations</h4>
 <img src="images/ConsulVaultConfig.png">
 <h4>Frontend Web with Angular:</h4>
-
+<h5>Product List</h5>
+<img src="images/frontend-Product.png">
+<h5>Customers</h5>
+<img src="images/frontend-Customer.png">
+<h5>Customer Orders : Customer 1</h5>
+<img src="images/frontend-OrdersCutomer1.png">
+<h5>Order Details of Customer 1</h5>
+<img src="images/frontend-OrderDetails.png">
 
 
 

@@ -30,9 +30,9 @@ public class OrderRestController {
         order ordr=orderRepository.findById(id).get();
     Customer customer=customerRestClientService.customerById(ordr.getCustomerId());
     ordr.setCustomer(customer);
-        ordr.getProductItemList().forEach(p->{
-            Product product=productRestClientService.productById(p.getProductId());
-            p.setProduct(product);
+        ordr.getProductItemList().forEach(pi->{
+            Product product=productRestClientService.productById(pi.getProductId());
+            pi.setProduct(product);
         });
         return ordr;
     }

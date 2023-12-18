@@ -23,9 +23,17 @@ public class order {
     private  Long id;
     private Date createdAt;
     private OrderStatus status;
-    private Long CustomerId;
+    private Long customerId;
     @Transient
     private Customer customer;
     @OneToMany(mappedBy = "order")
     private  List<ProductItem> productItemList;
+    public double getTotal(){
+        double somme=0;
+        for(ProductItem pi:productItemList){
+            somme+=pi.getAmount();
+        }
+        return somme;
+    }
+
 }

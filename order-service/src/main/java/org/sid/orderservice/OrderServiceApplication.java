@@ -39,7 +39,7 @@ public class OrderServiceApplication {
 			Random random=new Random();
 			for (int i=0 ; i <20 ;i++){
 				order ordr=order.builder()
-						.CustomerId(customers.get(random.nextInt(customers.size())).getId())
+						.customerId(customers.get(random.nextInt(customers.size())).getId())
 						.status(Math.random()>0.5? OrderStatus.PENDING:OrderStatus.CREATED)
 						.createdAt(new Date())
 						.build();
@@ -53,6 +53,7 @@ public class OrderServiceApplication {
 								.quantity(1 + random.nextInt(10))
 								.discount(Math.random())
 								.build();
+						productItemRepository.save(productItem);
 					}
 				}
 			}
